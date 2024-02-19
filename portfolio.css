@@ -1,0 +1,195 @@
+
+  
+  body {
+    margin: 0;
+    animation: shimmerEffect 20s infinite; /* Shimmering effect every 1 second */
+    background: linear-gradient(90deg, #d5def5, #cca8e9, #c3bef0, #cca8e9, #d5def5); /* Gradient background */
+    background-size: 200% 100%; /* Twice the width to create shimmering effect */
+}
+
+@keyframes shimmerEffect {
+    0% {
+        background-position: 100% 0; /* Start from the right */
+    }
+    100% {
+        background-position: -100% 0; /* Move to the left */
+    }
+}
+
+
+
+
+
+.bigDiv {
+  height: 300px;
+  width: calc(100% - 2cm); /* Adjust the width as needed */
+  background: #fcfefe; 
+  margin: 1cm auto; /* Center the div and add 1cm margin on top and bottom */
+  border-radius: 80px; 
+  
+  
+}
+
+
+
+h1{
+    
+  margin: 5; /* Add this line to reset the margin */
+  font-family: 'Protest Guerrilla', sans-serif;
+   font-weight: bold;
+   font-size: 130px;
+  text-align: center;
+  padding: 10px;
+  
+  border-radius: 10px; 
+}
+
+h3{
+ 
+    padding: 0px 100px;
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    text-align: center;
+    margin-top: 80px;
+}
+h2{
+  text-align: center;
+  
+  font-family: 'Oswald', sans-serif;
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+  
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+.container {
+  float: left;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+  width: 550px; /* Adjust the width as needed */
+  height: 550px; /* Adjust the height as needed */
+  margin-right: 20px;
+
+  top: -100px; /* Adjust the top position as needed */
+  left: 10px; /* Adjust the left position as needed */
+}
+
+.custom-shape  {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+.mySlides {
+  display: none;
+}
+
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}

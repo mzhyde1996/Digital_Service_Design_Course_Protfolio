@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+
+
+
+  .gallery-item {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 25px;
+    display: block;
+    
+    width: 100%; /* Change to percentage or remove for auto width */
+    height: 300px;
+}
+
+
+
+  
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 80%; /* Set width to 80% to match the image */
+  height: 80%; /* Set height to 100% */
+  opacity: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.image {
+  width: 80%; /* Set the image width to 80% */
+  height: 80%; /* Maintain the aspect ratio */
+  transition: transform 0.3s ease-in-out;
+
+  
+  display: block;
+  
+  display: grid;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+
+
+.overlay.active {
+    opacity: 1;
+}
+* {box-sizing: border-box}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+   
+}
+
+.modal p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+.modal-content {
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fefefe;
+    border-radius: 20px;
+}
+
+
