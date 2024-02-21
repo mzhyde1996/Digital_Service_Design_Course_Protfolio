@@ -1,7 +1,12 @@
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
   
   body {
     margin: 0;
+    padding: 0;
     animation: shimmerEffect 20s infinite; /* Shimmering effect every 1 second */
     background: linear-gradient(90deg, #d5def5, #cca8e9, #c3bef0, #cca8e9, #d5def5); /* Gradient background */
     background-size: 200% 100%; /* Twice the width to create shimmering effect */
@@ -16,46 +21,118 @@
     }
 }
 
-
-
-
-
-.bigDiv {
-  height: 300px;
-  width: calc(100% - 2cm); /* Adjust the width as needed */
-  background: #fcfefe; 
-  margin: 1cm auto; /* Center the div and add 1cm margin on top and bottom */
-  border-radius: 80px; 
-  
-  
-}
-
-
-
-h1{
-    
-  margin: 5; /* Add this line to reset the margin */
-  font-family: 'Protest Guerrilla', sans-serif;
-   font-weight: bold;
-   font-size: 130px;
-  text-align: center;
-  padding: 10px;
-  
-  border-radius: 10px; 
-}
-
-h3{
- 
-    padding: 0px 100px;
-    font-family: 'Oswald', sans-serif;
-    display: flex;
+h1 {
+    font-family: 'Protest Guerrilla', sans-serif;
+     font-weight: bold;
+     font-size: 130px;
     text-align: center;
-    margin-top: 80px;
+    padding: 10px;        
+    margin-bottom: 0;
+    margin-top: 130px;
 }
-h2{
-  text-align: center;
-  
+
+
+h3 {
   font-family: 'Oswald', sans-serif;
+  top: 4.4rem;
+  left: 3rem;
+  max-width: 160px; /* Adjust the maximum width of the lines as needed */
+  position: absolute;
+  z-index: 2; /* Ensure the h3 is above the image */
+  font-size: 14px; 
+}
+
+.chatbubble {
+  position: relative;
+  overflow: hidden;
+  width: 350px; /* Adjust the width as needed */
+  height: 350px; /* Adjust the height as needed */
+  left: 390px;
+ 
+
+}
+
+.chat {
+  max-width: 90%;
+  height: 60%;
+  display: block;
+margin-top: 50px;
+
+  padding: 0;
+  line-height: 0;
+}
+.custom-shape {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 300px; /* Adjust the width as needed */
+  height: 300px; /* Adjust the height as needed */
+  left: 250px;
+  max-width: 100%;
+ bottom:90px;
+  margin: 0;
+
+  z-index: 1;
+}
+.bigDiv {
+  height: 200px;
+  width: 900px; 
+  background: #fcfefe; 
+  margin: 0 auto ;
+  border-radius: 80px;
+  position: relative;
+  bottom: 330px;
+  left: 80px;
+  z-index: 0; 
+
+}
+
+@media (max-width: 768px) {
+  .custom-shape {
+    width: 80%; /* Adjust the width for smaller screens */
+    left: 0; /* Reset left position */
+    margin: 0 auto; /* Center horizontally on smaller screens */
+    top: -50px; /* Adjust the top position for smaller screens */
+  }
+
+  .bigDiv {
+    width: 80%; /* Adjust the width for smaller screens */
+    margin: 0 auto; /* Center horizontally on smaller screens */
+    top: -300px; /* Adjust the top position for smaller screens */
+  }
+
+  .whoiam{
+    text-align: center;
+    position: relative;
+    top: 70px; 
+    left: 40px;
+    font-family: 'Oswald', sans-serif;
+  }
+}
+
+
+
+
+.whoiam{
+  text-align: center;
+  position: relative;
+  top: 70px; 
+  left: 40px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.mythoughts{
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  position: relative;
+  bottom: 200px;
+}
+
+h2{
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+
+  padding: 0;
 }
 
 
@@ -95,30 +172,129 @@ h2{
   cursor: pointer;
 }
 
-
-
-.container {
-  float: left;
+.gallery {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 5px; 
+  padding: 20px;
+  max-width: 1200px; 
+  width: 100%; 
+  margin: 0 auto; 
+  margin-top: 0; 
   position: relative;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-right: 20px;
-  width: 550px; /* Adjust the width as needed */
-  height: 550px; /* Adjust the height as needed */
-  margin-right: 20px;
+  bottom: 100px;
 
-  top: -100px; /* Adjust the top position as needed */
-  left: 10px; /* Adjust the left position as needed */
-}
-
-.custom-shape  {
-  max-width: 100%;
-  height: auto;
 }
 
 
+  .gallery-item {
+   
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 25px;
+    display: block;
+    width: 70%; /* Adjust the width to make the hover area smaller */
+    margin: 0 auto; /* Center the gallery item within the grid */
+    height: 90%;
+    
+    
+}
+@media (max-width: 768px) {
+  .gallery {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items vertically on smaller screens */
+  }
 
-.mySlides {
+  .gallery-item {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
+
+
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.image {
+  width: 100%; 
+  height: 100%; 
+  transition: transform 0.3s ease-in-out;
+  display: block;
+  
+}
+
+.gallery-item:hover .image {
+  transform: scale(1.2); 
+}
+
+.overlay {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: black;
+  opacity: 2;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.Anne {
+  color: white;
+  
+}
+
+.Don{
+  color: white;
+}
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+
+/*modal*/
+* {box-sizing: border-box}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+   
+}
+
+.modal p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+.modal-content {
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fefefe;
+    border-radius: 20px;
+}
+
+
+/*.mySlides {
   display: none;
 }
 
@@ -192,4 +368,4 @@ h2{
 .active,
 .demo:hover {
   opacity: 1;
-}
+}*/

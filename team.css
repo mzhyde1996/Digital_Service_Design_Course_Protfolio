@@ -79,3 +79,12 @@
     right: 2%;
   }
 
+  .field{
+    position: relative;
+    top: 50px;
+  }
+
+  .teamfooter{
+    position: relative;
+    top: 95px;
+  }
